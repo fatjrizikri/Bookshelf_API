@@ -1,0 +1,18 @@
+{
+  "name": "mengonsumsi-dan-menggabungkan",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "set PORT=3000 && node server.js",
+    "start:user": "set PORT=5000 && node user-service.js",
+    "start:order": "set PORT=4000 && node order-service.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/hapi": "^21.3.2",
+    "got": "^13.0.0"
+  }
+}

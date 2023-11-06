@@ -1,0 +1,379 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+:root{
+    --shadow-color: #656d72;
+    --black-color: #000;
+    --white-color: #fff;
+
+    --line-color: #d9d9d9;
+    --primary-background: #fff;
+    --secondary-background: #fbfbfb;
+    --third-background: #f5f3fe;
+
+    --primary-icon-color: #57D6FF;
+    --primary-icon-colorHover: #0087FF;
+
+    --section-panding: 6rem 0;
+    --item-boder-radius: 0.7rem;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+strong {
+  color: var(--black-color);
+}
+p{
+    font-size: 1rem;
+    line-height: 1.9rem;
+}
+
+p,
+li {
+  color: var(--shadow-color);
+}
+a {
+    text-decoration: none;
+}
+/* End Preparation */
+.header{
+  background-color: #656d72;
+}
+.main-container {
+    width: 1200px;
+    margin: 0 auto;
+}
+@media screen and (max-width: 1200px) {
+    .main-container {
+      width: 90%;
+    }
+}
+/* Titles */
+.section-title {
+  margin: 1rem 0 4rem;
+  font-size: 2rem;
+}
+.pre-title {
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  color: var(--shadow-color);
+  position: relative;
+  padding-left: 40px;
+  width: fit-content;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.pre-title::before {
+  content: "";
+  width: 30px;
+  height: 1px;
+  background: var(--white-color);
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 50%;
+}
+/* Layouts */
+.grid-1 {
+  display: grid;
+  /* grid-template-columns: 1fr 1fr 1fr; use this first, use code below when its time for explaining responsive design part */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+}
+.grid-2{
+  height: auto;
+  border: 1px solid #ddd;
+  gap: 3rem;
+  display: flex;
+  overflow-y: auto;
+}
+/* header */
+.header-nav{
+  background-color: #656d72;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* top, right, buttom, left */
+  padding: 1rem 2rem 1rem 2rem;
+}
+.navbar ul{
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+}
+.mylogo{
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 2rem;
+}
+.mylogo i{
+  color: var(--black-color);
+  padding-right: 1rem;
+}
+.navbar ul li{
+  align-items: center;
+}
+.navbar ul li a{
+  color: var(--black-color);
+}
+.access{
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+.access a{
+  color: var(--black-color);
+}
+.menu-icon{
+  display: none;
+  top: 33px;
+  right: 35px;
+  z-index: 99;
+  position: fixed;
+  color: var(--black-color);
+}
+/* section page home */
+.page-home{
+  height: 720px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* We're not going to use automatic template columns, because we need to know when the columns is go below. So we can exchange the order of the element */
+  align-items: center;
+}
+.home-name{
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0.5rem 0 1rem;
+}
+.image-home img{
+  width: 90%;
+}
+.image-home{
+  display: flex;
+  justify-content: center;
+}
+/* aubout us */
+#about-us{
+  background-color: #93d4cd;
+  padding: var(--section-panding);
+  align-items: center;
+}
+.main-company{
+  display: flex;
+}
+.purpose-company .misi,
+.purpose-company .visi,
+.purpose-company .moto,
+strong{
+  text-align: center;
+}
+.purpose-company .name-company{
+  text-align: center;
+  padding-bottom: 2rem;
+  font-size: 2rem;
+}
+.about-us p{
+  margin: 1.5rem 0;
+  font-weight: 500;
+  font-size: 1.05rem;
+  text-align: center;
+}
+.purpose-company{
+  background-color: #c5f0ff;
+  border-radius: 4rem;
+  padding: 2rem;
+}
+.logo-company{
+}
+/* services */
+#services{
+  background-color: #d9d9d9;
+  padding: var(--section-panding);
+}
+.services .pre-title {
+  margin: 0 auto;
+}
+
+.services-title {
+  text-align: center;
+}
+.service {
+  padding: 3rem 2rem;
+  text-align: center;
+  background: var(--primary-background);
+  border-radius: var(--item-boder-radius);
+}
+
+.service h4 {
+  margin: 1.5rem 0;
+  font-weight: 500;
+  font-size: 1.05rem;
+}
+
+.service-icon {
+  background: var(--third-background);
+  width: fit-content;
+  margin: 0 auto;
+  padding: 1rem 1.3rem;
+  border-radius: 0.5rem;
+}
+
+.service-icon i{
+  font-size: 32px;
+}
+#projects{
+  background-color: var(--secondary-background);
+  padding: var(--section-panding);
+}
+.project {
+  min-width: 45%;
+  height: auto;
+  padding: 2rem 1rem;
+  border-radius: var(--item-boder-radius);
+  overflow: hidden;
+  border: 1px solid var(--shadow-color);
+}
+.project-cover {
+  height: 275px;
+}
+
+.project img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-info {
+  padding: 2rem 1.5rem;
+}
+
+.project-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.project h4 {
+  font-weight: 500;
+  font-size: 1.05rem;
+}
+.project-tags {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+/* skills */
+#skills{
+  background-color: #979798;
+  padding: var(--section-panding);
+}
+.skills-grid {
+  display: grid;
+  /* grid-template-columns: 40% 60%; */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 3rem;
+}
+.education {
+  display: flex;
+  gap: 1rem;
+}
+.education-info p {
+  color: #000;
+  margin: 0.6rem 0 1.4rem;
+}
+
+.education-years {
+  margin-bottom: 3rem;
+}
+.education .line {
+  padding: 0 0.7rem;
+}
+
+.education .line div {
+  width: 2px;
+  height: 100%;
+  background: var(--white-color);
+  position: relative;
+}
+.skills-list ul{
+  display: grid;
+  /* grid-template-columns: 1fr 1fr 1fr; use this first, use code below when its time for explaining responsive design part */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 0.2fr));
+  gap: 3rem;
+}
+.skills-list ul i{
+  font-size: 32px;
+  color: #000;
+}
+
+.skills-list ul li{
+  color: #000;
+}
+.education .line div:before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background: var(--white-color);
+  border-radius: 50%;
+  position: absolute;
+  left: -6px;
+}
+footer{
+  padding: 4rem 0;
+  background-color: var(--shadow-color);
+  text-align: center;
+}
+.footer-icons{
+  font-size: 32px;
+  color: #002fff;
+}
+footer p{
+  color: #000;
+  font-size: 1.5rem;
+}
+/* animated cursor */
+.navbar a:hover{
+  padding: 2rem;
+  background-color: red;
+  border-radius: 4rem;
+  font-weight: 700;
+  color: var(--black-color);
+}
+.navbar a.active{
+  padding: 1.65rem;
+  background-color: red;
+  border-radius: 4rem;
+  font-weight: 700;
+  color: var(--black-color);
+}
+.grid-2 .project:hover{
+  background-color: #c5f0ff;
+  box-shadow: rgb(93, 0, 255) 0px 3px 5px;
+}
+.footer-icons a:hover{
+  font-size: 42px;
+  color: #1500ff;
+}
+.access a:hover{
+  font-weight: 700;
+  color: #1500ff;
+  border-radius: 4rem;
+  background-color: #ddd;
+  padding: 1rem;
+  box-shadow: rgb(93, 0, 255) 0px 3px 5px;
+}
