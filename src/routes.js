@@ -31,6 +31,7 @@ const routes = [
     path: '/books/{id}',
     handler: EditBookById,
   },
+  // menghapus buku berdasarkan id
   {
     method: 'DELETE',
     path: '/books/{id}',

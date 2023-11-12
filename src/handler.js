@@ -61,10 +61,11 @@ const AddNewBook = (request, h) => {
 };
 // melihat semua Buku
 const GetAllBooks = (request, h) => {
+  const simplifiedBooks = books.map(({ id, name, publisher }) => ({ id, name, publisher }));
   const response = h.response({
     status: 'success',
     data: {
-      books,
+      books: simplifiedBooks,
     },
   });
   return response.code(200);
